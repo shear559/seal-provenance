@@ -1,0 +1,694 @@
+{
+  "schema": "SEAL/conformance/v2",
+  "generator": "vectors_v2.mjs (normative encoder: seal_encoding.mjs)",
+  "typeString": "Seal712(uint16 exactHashMethodId,bytes32 exactHash,uint8 sealMode,bytes32 fingerprintRoot,bytes32 chunkRoot,string cid,uint8 cidProfile,address issuer,string documentId,bytes32 prevGuid,uint64 declaredTime,uint16 sigMethodId)",
+  "domain": {
+    "name": "SEAL",
+    "version": "1",
+    "chainId": 11155111,
+    "verifyingContract": "0x0000000000000000000000000000000000000001",
+    "registryId": "0x655510791a884157610d7097ab54bec0855a43db60494d94a9370936ea3228c3"
+  },
+  "signers": {
+    "1": {
+      "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "note": "Hardhat/Anvil well-known account #1"
+    },
+    "2": {
+      "address": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "note": "Hardhat/Anvil well-known account #2"
+    },
+    "3": {
+      "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "note": "Hardhat/Anvil well-known account #3"
+    }
+  },
+  "rules": {
+    "tree": "leaf_i = keccak256(item_i) in item order; parent = keccak256(left || right) with fixed left-right order (no sorted pairs); an odd node at any level is promoted unchanged to the next level",
+    "byteFlip": "flipped byte = original byte XOR 0xFF"
+  },
+  "vectorCount": 17,
+  "vectors": [
+    {
+      "id": "G-01",
+      "label": "empty file (0 bytes) — PUBLIC mode",
+      "file": {
+        "hex": "0x",
+        "utf8": null
+      },
+      "fileLength": 0,
+      "mode": "PUBLIC",
+      "salt": null,
+      "openingCheck": {
+        "recomputeMatches": true
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-A-PUB",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+      "commitmentDigest": "0x23d513835ae957007d77b260f1f4c781ef7a0b6909a944ba53ec422a7788a048",
+      "signature": {
+        "r": "0x9483946a0b2c4dc6cabc811a771b77b5aeeda435736dae6413424fd115900a1d",
+        "s": "0x59a8a2c053eee0aa0d090fdfd7720514a53eaa85057c38fb0c3b308c86a0726e",
+        "v": 28,
+        "serialized": "0x9483946a0b2c4dc6cabc811a771b77b5aeeda435736dae6413424fd115900a1d59a8a2c053eee0aa0d090fdfd7720514a53eaa85057c38fb0c3b308c86a0726e1c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x1c32b8fee85691ae5a170d3a51b8c9b0d87c615d59b8f11959f9683d8ea99bb0"
+    },
+    {
+      "id": "G-02",
+      "label": "empty file (0 bytes) — CONFIDENTIAL mode",
+      "file": {
+        "hex": "0x",
+        "utf8": null
+      },
+      "fileLength": 0,
+      "mode": "CONFIDENTIAL",
+      "salt": "0x9ef09b537d7ab935c2183e3465c66627e2f1eb849a803d6ee322a66d014bd749",
+      "openingCheck": {
+        "correctSalt": "0x9ef09b537d7ab935c2183e3465c66627e2f1eb849a803d6ee322a66d014bd749",
+        "correctSaltMatches": true,
+        "wrongSalt": "0x9ef09b537d7ab935c2183e3465c66627e2f1eb849a803d6ee322a66d014bd7b6",
+        "wrongSaltRule": "last byte of salt XOR 0xFF",
+        "wrongSaltMatches": false
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x840828bf7fc4f96764627b919e890f749dcf6cc838ce3e8d1626c7b4f28e9b6e",
+        "sealMode": 1,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-A-CONF",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x840828bf7fc4f96764627b919e890f749dcf6cc838ce3e8d1626c7b4f28e9b6e",
+      "commitmentDigest": "0x7b3adb8a21e407c84a50a82efbb54fc1cf4a5f946a168950cddcddd59168feb5",
+      "signature": {
+        "r": "0xd5423996aaaa6d1697471ad276a1783dcd8ef117f7823dbe55665ac5f5bdd8ad",
+        "s": "0x565a38a6caca5007b417e8271e5b84bc7f360ded685ceddf51f5d6f75d3bc344",
+        "v": 28,
+        "serialized": "0xd5423996aaaa6d1697471ad276a1783dcd8ef117f7823dbe55665ac5f5bdd8ad565a38a6caca5007b417e8271e5b84bc7f360ded685ceddf51f5d6f75d3bc3441c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0xe4b6f3673730ce84c133f5bfb358e425d320b9f596cdc6aa0b8c72122529ee1c"
+    },
+    {
+      "id": "G-03",
+      "label": "single zero byte 0x00 — PUBLIC mode",
+      "file": {
+        "hex": "0x00",
+        "utf8": null
+      },
+      "fileLength": 1,
+      "mode": "PUBLIC",
+      "salt": null,
+      "openingCheck": {
+        "recomputeMatches": true
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-B-PUB",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0xbc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a",
+      "commitmentDigest": "0xac116a99ae0eee14471b92cb095fdf7d2b08a0395aaea5d8410e7ae8ccf6fa32",
+      "signature": {
+        "r": "0x7ad39a69e71b6b4e746319b1d1f240660a0ed06d5a53fa49025de1958928c1e9",
+        "s": "0x1dae98bbd7a28fc93d6684053fe8de1e20bb0928c1fc37991a4fcc0726e571d7",
+        "v": 27,
+        "serialized": "0x7ad39a69e71b6b4e746319b1d1f240660a0ed06d5a53fa49025de1958928c1e91dae98bbd7a28fc93d6684053fe8de1e20bb0928c1fc37991a4fcc0726e571d71b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x7f99ec91cf42f02cafb031e78d1aaa7e7ed6aef21921b178ca61188677e8a358"
+    },
+    {
+      "id": "G-04",
+      "label": "single zero byte 0x00 — CONFIDENTIAL mode",
+      "file": {
+        "hex": "0x00",
+        "utf8": null
+      },
+      "fileLength": 1,
+      "mode": "CONFIDENTIAL",
+      "salt": "0xe83be60cd9ed1ee2e1fce0344259c93330b58359e9e23fb2ca6a0cf2ff4f8bb2",
+      "openingCheck": {
+        "correctSalt": "0xe83be60cd9ed1ee2e1fce0344259c93330b58359e9e23fb2ca6a0cf2ff4f8bb2",
+        "correctSaltMatches": true,
+        "wrongSalt": "0xe83be60cd9ed1ee2e1fce0344259c93330b58359e9e23fb2ca6a0cf2ff4f8b4d",
+        "wrongSaltRule": "last byte of salt XOR 0xFF",
+        "wrongSaltMatches": false
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x393b5fd7b2d5c21119f15343f84ce01c2093af07d855ba9155c8fdcb9936de48",
+        "sealMode": 1,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-B-CONF",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x393b5fd7b2d5c21119f15343f84ce01c2093af07d855ba9155c8fdcb9936de48",
+      "commitmentDigest": "0x3802614e4629135b2f1dd27550a828b62a0173819712ff8352e7f6558ae7de3f",
+      "signature": {
+        "r": "0xf9be6210f4e1b948926e4882ec060dd2be90beb5054bc2ce5ec75e6fce7c125c",
+        "s": "0x0ad08fce4255f3262f86da0e94e88be3733ae2951d5b2233ee3109d74396048a",
+        "v": 28,
+        "serialized": "0xf9be6210f4e1b948926e4882ec060dd2be90beb5054bc2ce5ec75e6fce7c125c0ad08fce4255f3262f86da0e94e88be3733ae2951d5b2233ee3109d74396048a1c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0xbd5f9fcc9cc13956195fd7161111031645edf89291f93e8d2b426e0bdb835c5a"
+    },
+    {
+      "id": "G-05",
+      "label": "Hebrew UTF-8 text — PUBLIC mode",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "fileLength": 77,
+      "mode": "PUBLIC",
+      "salt": null,
+      "openingCheck": {
+        "recomputeMatches": true
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-C-PUB",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+      "commitmentDigest": "0xc6a3b8e0a2e4541db8f4a4a0652c68ea3fb6eff2461bf801b487553e0161901e",
+      "signature": {
+        "r": "0x03631093fd61ce79d70d8bd1aeaceded8205ef80e0b356237bfc8d1853ec6711",
+        "s": "0x3eebc84dda2a2a821bf610bbaece2906c8339f3e8bc2971cbb102842fc359305",
+        "v": 28,
+        "serialized": "0x03631093fd61ce79d70d8bd1aeaceded8205ef80e0b356237bfc8d1853ec67113eebc84dda2a2a821bf610bbaece2906c8339f3e8bc2971cbb102842fc3593051c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0xf621f21baf857ba2bb19c889cbc118a8591a122728042913f365945219745cac"
+    },
+    {
+      "id": "G-06",
+      "label": "Hebrew UTF-8 text — CONFIDENTIAL mode",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "fileLength": 77,
+      "mode": "CONFIDENTIAL",
+      "salt": "0x64b8b8708edf47da7be96a165c70d9dcbc0ca8d20382d4bacd3f85352ce70928",
+      "openingCheck": {
+        "correctSalt": "0x64b8b8708edf47da7be96a165c70d9dcbc0ca8d20382d4bacd3f85352ce70928",
+        "correctSaltMatches": true,
+        "wrongSalt": "0x64b8b8708edf47da7be96a165c70d9dcbc0ca8d20382d4bacd3f85352ce709d7",
+        "wrongSaltRule": "last byte of salt XOR 0xFF",
+        "wrongSaltMatches": false
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x9c0a8bd2ef8b06d38daf1d958d08b6a9121307c125c4398b6c0b257cd4044ab4",
+        "sealMode": 1,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-C-CONF",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x9c0a8bd2ef8b06d38daf1d958d08b6a9121307c125c4398b6c0b257cd4044ab4",
+      "commitmentDigest": "0x2775190e794521b6c63d918f075a73c2962d724e1cb1098340b5e4ead4978ef0",
+      "signature": {
+        "r": "0xbba37d5ff40d8767a39b88991268a54322121b83672f6624764e07a07b5e5e53",
+        "s": "0x3bba8e16810082986ce55a0fba241ee9d22b44a6e83b136178ef4c1fd0d06150",
+        "v": 27,
+        "serialized": "0xbba37d5ff40d8767a39b88991268a54322121b83672f6624764e07a07b5e5e533bba8e16810082986ce55a0fba241ee9d22b44a6e83b136178ef4c1fd0d061501b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0xa062ea8b40c61079e89593a8a789d2fa848845ae71e1dea9fb88cc3a62722400"
+    },
+    {
+      "id": "G-07",
+      "label": "100 kB deterministic binary — PUBLIC mode",
+      "file": {
+        "hex": null,
+        "utf8": null,
+        "rule": "byte[i] = (i*31 + 7) & 0xFF for i in 0..102399 (length 102400)",
+        "keccak256": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20"
+      },
+      "fileLength": 102400,
+      "mode": "PUBLIC",
+      "salt": null,
+      "openingCheck": {
+        "recomputeMatches": true
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-D-PUB",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20",
+      "commitmentDigest": "0x72be52ae5c9f7f6024ba9c6a8de3bb508e1b365fe021086e9f5986922b3a734d",
+      "signature": {
+        "r": "0x9e8491bc627c55eccaab32bc914729fa5ca74db92bba1f580fa5feecc5348b82",
+        "s": "0x7e7ab93bfa051c5e7db4c7146a98d065795fc3616a2af340ca6afe6435790101",
+        "v": 28,
+        "serialized": "0x9e8491bc627c55eccaab32bc914729fa5ca74db92bba1f580fa5feecc5348b827e7ab93bfa051c5e7db4c7146a98d065795fc3616a2af340ca6afe64357901011c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x8075475db750b2acc0ae9b805d17cc61d60d93d5d394e8dc9de68fc0cfd8a72b"
+    },
+    {
+      "id": "G-08",
+      "label": "100 kB deterministic binary — CONFIDENTIAL mode",
+      "file": {
+        "hex": null,
+        "utf8": null,
+        "rule": "byte[i] = (i*31 + 7) & 0xFF for i in 0..102399 (length 102400)",
+        "keccak256": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20"
+      },
+      "fileLength": 102400,
+      "mode": "CONFIDENTIAL",
+      "salt": "0x15ceb57477fc2299df52044e4019c3e4439064c5c5146bdf094e592cdfd8b489",
+      "openingCheck": {
+        "correctSalt": "0x15ceb57477fc2299df52044e4019c3e4439064c5c5146bdf094e592cdfd8b489",
+        "correctSaltMatches": true,
+        "wrongSalt": "0x15ceb57477fc2299df52044e4019c3e4439064c5c5146bdf094e592cdfd8b476",
+        "wrongSaltRule": "last byte of salt XOR 0xFF",
+        "wrongSaltMatches": false
+      },
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0xaedf8fdca3d8b9b2293eff515520e1b39797b46376b0097aa345f6101133ea3d",
+        "sealMode": 1,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-D-CONF",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0xaedf8fdca3d8b9b2293eff515520e1b39797b46376b0097aa345f6101133ea3d",
+      "commitmentDigest": "0x0b889f0ebaa2da87d36c57744f5021b7219b889f6247a350ede2219fc0f7f0f6",
+      "signature": {
+        "r": "0x44fe6a05357c9fe2a2e6ac3b75c3c6cc6a4bdd51d43465f9cf7d71e1cea412a9",
+        "s": "0x3e68fcc72c9ebb41b227bccb66dae51560b9558ad434224ffa26daac817634e5",
+        "v": 27,
+        "serialized": "0x44fe6a05357c9fe2a2e6ac3b75c3c6cc6a4bdd51d43465f9cf7d71e1cea412a93e68fcc72c9ebb41b227bccb66dae51560b9558ad434224ffa26daac817634e51b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x7b504b8e14e83c9b9a2b136b99875dcab3f102b403072a102f4e0ae48f447e31"
+    },
+    {
+      "id": "G-09",
+      "label": "multi-attestation — Hebrew text sealed by signer #1",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "mode": "PUBLIC",
+      "salt": null,
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-MULTI",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+      "commitmentDigest": "0x5278d0f50f82f428ff0205fdc0f553f575b207c396e6cd035d4e4d61da9fb52d",
+      "signature": {
+        "r": "0x86d7b0a221c40414d9607005e0c22ad15703975d5ae108fc37ab69d700da897f",
+        "s": "0x02ffd11f7cf983e17459d4f428f9318b00fa673647c5e00cf2ffebc5a1ce0c20",
+        "v": 28,
+        "serialized": "0x86d7b0a221c40414d9607005e0c22ad15703975d5ae108fc37ab69d700da897f02ffd11f7cf983e17459d4f428f9318b00fa673647c5e00cf2ffebc5a1ce0c201c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x4fc48e7c6f6e6302413f1bc2336af9c8e7e70bc40c0f67e8697550c1abf283ac"
+    },
+    {
+      "id": "G-10",
+      "label": "multi-attestation — Hebrew text sealed by signer #2",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "mode": "PUBLIC",
+      "salt": null,
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-MULTI",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+      "commitmentDigest": "0x5278d0f50f82f428ff0205fdc0f553f575b207c396e6cd035d4e4d61da9fb52d",
+      "signature": {
+        "r": "0x6f5f08a7517785d8c6c52151d07fdf35f6af3251213f1962c9ad9e575f1a2c40",
+        "s": "0x053cfb44888bb3460c9d6adbcac691a9df5ecc590a9261aba2f3518584370107",
+        "v": 28,
+        "serialized": "0x6f5f08a7517785d8c6c52151d07fdf35f6af3251213f1962c9ad9e575f1a2c40053cfb44888bb3460c9d6adbcac691a9df5ecc590a9261aba2f35185843701071c"
+      },
+      "signer": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "signerAccount": 2,
+      "guid": "0x2c51b5caf4be9f0ebfcd87e3da695457b7ecdf5eb2f603d4d7bfe18fe944530f"
+    },
+    {
+      "id": "G-11",
+      "label": "multi-attestation — Hebrew text sealed by signer #3",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "mode": "PUBLIC",
+      "salt": null,
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-MULTI",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+      "commitmentDigest": "0x5278d0f50f82f428ff0205fdc0f553f575b207c396e6cd035d4e4d61da9fb52d",
+      "signature": {
+        "r": "0x0f3405c8be2beb7457b383afc795314d5f0abf32023ad8633153c59f33034b36",
+        "s": "0x5e3b5f7933a39b589c082e3f508a6a59a2df0387d77ac8b6223eed1d0466d808",
+        "v": 27,
+        "serialized": "0x0f3405c8be2beb7457b383afc795314d5f0abf32023ad8633153c59f33034b365e3b5f7933a39b589c082e3f508a6a59a2df0387d77ac8b6223eed1d0466d8081b"
+      },
+      "signer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "signerAccount": 3,
+      "guid": "0x839519a8dcbd040fa0ebec731f183c348fb9cc2b3c659c1d1262d17ab106a7f9"
+    },
+    {
+      "id": "G-12",
+      "label": "boundary — declaredTime = 0",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "mode": "PUBLIC",
+      "salt": null,
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-TIME",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "0",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+      "commitmentDigest": "0x4ad2c5e885b6c1d0466e0b520494caeb6814fea5dccd4d06ed53f60a4478fcfd",
+      "signature": {
+        "r": "0xa84b9941e568a2498679fd1473ea816db47f90473f2fca6a0934b80b4738d44a",
+        "s": "0x55bc3de470d69f0f309e890735ae838dd2e144e58d9c2a8fe669ca5ddb203fb2",
+        "v": 27,
+        "serialized": "0xa84b9941e568a2498679fd1473ea816db47f90473f2fca6a0934b80b4738d44a55bc3de470d69f0f309e890735ae838dd2e144e58d9c2a8fe669ca5ddb203fb21b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x47679fee20db26be1739c8549df161089f4bd91943fa842ab1a225fdfa2249d5"
+    },
+    {
+      "id": "G-13",
+      "label": "boundary — declaredTime = 2^64-1",
+      "file": {
+        "hex": "0xd797d795d7aad79d20d793d799d792d799d798d79cd79920e2809420d790d791d798d797d79420d7a7d7a8d799d7a4d798d795d792d7a8d7a4d799d7aa20d79ed7a7d7a6d795d7a2d799d7aa2e",
+        "utf8": "חותם דיגיטלי — אבטחה קריפטוגרפית מקצועית."
+      },
+      "mode": "PUBLIC",
+      "salt": null,
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-TIME",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "18446744073709551615",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x31f3a81b0c5029cea7eb646003a8fb3da1de0620ee2846573c383c7b67ac143c",
+      "commitmentDigest": "0xa92dac4bcc364908c595c5037c878dadf99de6bf4259a311c1165e0702d12214",
+      "signature": {
+        "r": "0xe5b530c8fe4a0dcffe2fbc8157a93db17b5b44fde3614abd3e5e50c1c13dee6b",
+        "s": "0x783fc4da61e0d8b15394a21da75fb37d4692eaca86b6419c4e6c156e0c87de14",
+        "v": 27,
+        "serialized": "0xe5b530c8fe4a0dcffe2fbc8157a93db17b5b44fde3614abd3e5e50c1c13dee6b783fc4da61e0d8b15394a21da75fb37d4692eaca86b6419c4e6c156e0c87de141b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x03b9ed9665ff67640b495d293ccc52fb11bd7b788ae7605be325632dd5551bf9"
+    },
+    {
+      "id": "G-14",
+      "label": "chunk-tree fragment proof — 100 kB file, 4 × 25 kB chunks, proof for chunk 2",
+      "file": {
+        "rule": "byte[i] = (i*31 + 7) & 0xFF for i in 0..102399 (length 102400)",
+        "keccak256": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20"
+      },
+      "chunking": {
+        "chunkBytes": 25600,
+        "chunkCount": 4,
+        "treeRule": "leaf_i = keccak256(item_i) in item order; parent = keccak256(left || right) with fixed left-right order (no sorted pairs); an odd node at any level is promoted unchanged to the next level"
+      },
+      "chunkLeaves": [
+        "0x9272afee592bead8e605a522b5000cd15fca49dd2c9143aadbcd6079239bf1de",
+        "0x9272afee592bead8e605a522b5000cd15fca49dd2c9143aadbcd6079239bf1de",
+        "0x9272afee592bead8e605a522b5000cd15fca49dd2c9143aadbcd6079239bf1de",
+        "0x9272afee592bead8e605a522b5000cd15fca49dd2c9143aadbcd6079239bf1de"
+      ],
+      "chunkRoot": "0x73d2180471d361613f0839ca563dcd8b02a7a001304573af1f1f80d45111c2be",
+      "proof": {
+        "chunkIndex": 2,
+        "indexBase": "0-based",
+        "chunkLeaf": "0x9272afee592bead8e605a522b5000cd15fca49dd2c9143aadbcd6079239bf1de",
+        "path": [
+          {
+            "sibling": "0x9272afee592bead8e605a522b5000cd15fca49dd2c9143aadbcd6079239bf1de",
+            "side": "right"
+          },
+          {
+            "sibling": "0x13d0b8f18d68eb92bcb4e1fb5484d6ffebc65ef503076a352e13923cce873483",
+            "side": "left"
+          }
+        ],
+        "genuineChunkVerifies": true,
+        "forgedChunkRule": "first byte of chunk 2 XOR 0xFF",
+        "forgedChunkLeaf": "0x72bcae1c8f4ef66bbfc0cea4bc3f52ab3de95a5ae8d19199071ed7a02880de11",
+        "forgedChunkVerifies": false
+      },
+      "mode": "PUBLIC",
+      "salt": null,
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x73d2180471d361613f0839ca563dcd8b02a7a001304573af1f1f80d45111c2be",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "V2-CHUNKS",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x4f7643a86a528fc9335e12da4b4f50402960b4c40218d059d07f3bdd63eb8c20",
+      "commitmentDigest": "0x743082351bf1f80f5da3782292643eee4b061b00c10bc7650bdbdb1f5fa20597",
+      "signature": {
+        "r": "0x3273d8ed84387f2c651b37449863680729f6d9d69ce6c9d44d07d977a8d3d47c",
+        "s": "0x5d74b71d5c92d50aa525122461f558069796c7e3ff780c09f2b7677ce0ade5ab",
+        "v": 27,
+        "serialized": "0x3273d8ed84387f2c651b37449863680729f6d9d69ce6c9d44d07d977a8d3d47c5d74b71d5c92d50aa525122461f558069796c7e3ff780c09f2b7677ce0ade5ab1b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signerAccount": 1,
+      "guid": "0x8d4f56c3c5e66febb9e95eaf1ed74bf218e08d3bdc1973cf3a95b4c4cfe26b17"
+    },
+    {
+      "id": "G-15",
+      "label": "batch inclusion proof — Merkle root over guids of G-01..G-08, path for G-03",
+      "treeRule": "leaf_i = keccak256(item_i) in item order; parent = keccak256(left || right) with fixed left-right order (no sorted pairs); an odd node at any level is promoted unchanged to the next level",
+      "leafNote": "leaves are the 32-byte guids of G-01..G-08 in vector order (used directly, not re-hashed)",
+      "leaves": [
+        "0x1c32b8fee85691ae5a170d3a51b8c9b0d87c615d59b8f11959f9683d8ea99bb0",
+        "0xe4b6f3673730ce84c133f5bfb358e425d320b9f596cdc6aa0b8c72122529ee1c",
+        "0x7f99ec91cf42f02cafb031e78d1aaa7e7ed6aef21921b178ca61188677e8a358",
+        "0xbd5f9fcc9cc13956195fd7161111031645edf89291f93e8d2b426e0bdb835c5a",
+        "0xf621f21baf857ba2bb19c889cbc118a8591a122728042913f365945219745cac",
+        "0xa062ea8b40c61079e89593a8a789d2fa848845ae71e1dea9fb88cc3a62722400",
+        "0x8075475db750b2acc0ae9b805d17cc61d60d93d5d394e8dc9de68fc0cfd8a72b",
+        "0x7b504b8e14e83c9b9a2b136b99875dcab3f102b403072a102f4e0ae48f447e31"
+      ],
+      "batchRoot": "0x415044f70f60754b225e853d7fdf90632361aed85abbd03d71dd81dbce183d7f",
+      "proof": {
+        "vectorId": "G-03",
+        "leafIndex": 2,
+        "indexBase": "0-based",
+        "leaf": "0x7f99ec91cf42f02cafb031e78d1aaa7e7ed6aef21921b178ca61188677e8a358",
+        "path": [
+          {
+            "sibling": "0xbd5f9fcc9cc13956195fd7161111031645edf89291f93e8d2b426e0bdb835c5a",
+            "side": "right"
+          },
+          {
+            "sibling": "0xb85b6a5d56142249937faffebaa3ee5a1745099831177d2e9aa2827d68183790",
+            "side": "left"
+          },
+          {
+            "sibling": "0x13e28e503dc838eea6da85d709e02937679a746dbc8b8693da903cd6d4a6c9bc",
+            "side": "right"
+          }
+        ],
+        "verifies": true
+      }
+    },
+    {
+      "id": "G-16",
+      "label": "cross-chain replay matrix — G-09 signature replayed on chainId 1 and 137",
+      "sourceVector": "G-09",
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "signature": {
+        "r": "0x86d7b0a221c40414d9607005e0c22ad15703975d5ae108fc37ab69d700da897f",
+        "s": "0x02ffd11f7cf983e17459d4f428f9318b00fa673647c5e00cf2ffebc5a1ce0c20",
+        "v": 28,
+        "serialized": "0x86d7b0a221c40414d9607005e0c22ad15703975d5ae108fc37ab69d700da897f02ffd11f7cf983e17459d4f428f9318b00fa673647c5e00cf2ffebc5a1ce0c201c"
+      },
+      "matrix": [
+        {
+          "chainId": 11155111,
+          "commitmentDigest": "0x5278d0f50f82f428ff0205fdc0f553f575b207c396e6cd035d4e4d61da9fb52d",
+          "recovered": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+          "matchesSigner": true
+        },
+        {
+          "chainId": 1,
+          "commitmentDigest": "0xa43ddcae2f327a1e1a2983dfad3c1adf6806c6c770c34ecd51f1222e2ae702a3",
+          "recovered": "0x92a15b11124e0e1D673Ec0CA4Bf1bc213fE64660",
+          "matchesSigner": false
+        },
+        {
+          "chainId": 137,
+          "commitmentDigest": "0x3ae957605a8d9716b910b674a0fd8c1ec4d5671c852cb11a49e8521fe5f1388e",
+          "recovered": "0xD0ba29Fa690DFB3450bbAEe595559d434e6EDd65",
+          "matchesSigner": false
+        }
+      ],
+      "expect": "recovered == signer only on the signed chainId (11155111); replay on 1/137 yields a different address, attestation fails"
+    },
+    {
+      "id": "G-17",
+      "label": "ML-DSA-65 dual-signature over G-09 commitmentDigest (deterministic, extraEntropy=false)",
+      "algorithm": "ML-DSA-65 (FIPS 204), @noble/post-quantum",
+      "keygenSeed": "0x435665e4a7272c5de5b0956048c8fc6d1306fe13726d7b1759942401e54441e9",
+      "seedNote": "seed = keccak256(\"SEAL/v2/mldsa/seed\") used as 32 raw bytes",
+      "message": "0x5278d0f50f82f428ff0205fdc0f553f575b207c396e6cd035d4e4d61da9fb52d",
+      "sourceVector": "G-09",
+      "publicKeyLength": 1952,
+      "signatureLength": 3309,
+      "publicKeyFirst16Hex": "c5a1d96056e78283",
+      "signatureFirst16Hex": "c2460349aa750194",
+      "verify": true,
+      "tamperedMessageRule": "last byte of digest XOR 0xFF",
+      "tamperedMessage": "0x5278d0f50f82f428ff0205fdc0f553f575b207c396e6cd035d4e4d61da9fb5d2",
+      "tamperedVerify": false
+    }
+  ]
+}

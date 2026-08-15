@@ -1,0 +1,90 @@
+{
+  "schema": "SEAL/conformance/v1",
+  "typeString": "Seal712(uint16 exactHashMethodId,bytes32 exactHash,uint8 sealMode,bytes32 fingerprintRoot,bytes32 chunkRoot,string cid,uint8 cidProfile,address issuer,string documentId,bytes32 prevGuid,uint64 declaredTime,uint16 sigMethodId)",
+  "domain": {
+    "name": "SEAL",
+    "version": "1",
+    "chainId": 11155111,
+    "verifyingContract": "0x0000000000000000000000000000000000000001",
+    "registryId": "0x655510791a884157610d7097ab54bec0855a43db60494d94a9370936ea3228c3"
+  },
+  "vectors": [
+    {
+      "id": "D2-public",
+      "mode": "PUBLIC",
+      "document": "SEAL reference vector 001 — provenance, not truth: the artifact that was registered, attested by which key, and when.",
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x2d7c873760e246ac8f7810d3cc58c181ff2ff24dd5fe167fee0ee3ace76041dd",
+        "sealMode": 0,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "DOC-001",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x2d7c873760e246ac8f7810d3cc58c181ff2ff24dd5fe167fee0ee3ace76041dd",
+      "commitmentDigest": "0x93eefae82c790bc504581ba21ed72605b04596dbec2d3493d794a26054d563eb",
+      "signature": {
+        "r": "0x10257ef1bb3ae6ecaefe3a57cd37e7966519c78dc56e16919dc9b9d865493919",
+        "s": "0x6d01a15e94a701ffe7cb38a783736e492523a3f3421534785d7c69cb8cb9a7fc",
+        "v": 27,
+        "serialized": "0x10257ef1bb3ae6ecaefe3a57cd37e7966519c78dc56e16919dc9b9d8654939196d01a15e94a701ffe7cb38a783736e492523a3f3421534785d7c69cb8cb9a7fc1b"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "guid": "0xc60261347edb828291e0478e973aea38b5e109ed9139e610bded66d00c4551bd"
+    },
+    {
+      "id": "D3-tamper",
+      "document": "SEAL reference vector 00l — provenance, not truth: the artifact that was registered, attested by which key, and when.",
+      "exactHash": "0xa574a7c98083ca055a21cd0f1116d93444e0404db9566763892e41b916f15f21",
+      "expectIntegrity": "failed"
+    },
+    {
+      "id": "D4-replay",
+      "replayChainId": 1,
+      "recovered": "0xFea1Fb5D27809ca28778b3970F1470C12b06fe71",
+      "expect": "attestation-fail"
+    },
+    {
+      "id": "D5-confidential",
+      "mode": "CONFIDENTIAL",
+      "salt": "0x3bda72745501f8387ce518bb053bb6e699d52ae5ee4e491b28c7172ea4ae3e10",
+      "fields": {
+        "exactHashMethodId": 1,
+        "exactHash": "0x22d00beea3b5c6e16d02147040df1a9988e8a7506335973242ff02624e5722b1",
+        "sealMode": 1,
+        "fingerprintRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "chunkRoot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "cid": "",
+        "cidProfile": 0,
+        "issuer": "0x0000000000000000000000000000000000000000",
+        "documentId": "DOC-001",
+        "prevGuid": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "declaredTime": "1750000000",
+        "sigMethodId": 1
+      },
+      "exactHash": "0x22d00beea3b5c6e16d02147040df1a9988e8a7506335973242ff02624e5722b1",
+      "commitmentDigest": "0x114378c7bc468372c97e2e3a28c53682a67185f6df72d674a903afc5e31fbc49",
+      "signature": {
+        "r": "0x24938a4725d42dea4085f00a77f086255c806021cc20b0e6220c08b56c44d556",
+        "s": "0x41d309ce4921295e9a1f62373fbb25146c12198f111631db238b68f67d6b2f36",
+        "v": 28,
+        "serialized": "0x24938a4725d42dea4085f00a77f086255c806021cc20b0e6220c08b56c44d55641d309ce4921295e9a1f62373fbb25146c12198f111631db238b68f67d6b2f361c"
+      },
+      "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "guid": "0xc66479e7fbbf35007d0bd711c1992c2e5516b3860942cc1a49bbf522a165db48"
+    },
+    {
+      "id": "D5-dictionary",
+      "candidates": 100000,
+      "unsaltedFoundAt": 54321,
+      "unsaltedSeconds": 0.87,
+      "saltedConfirmations": 0
+    }
+  ]
+}

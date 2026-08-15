@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: >-
+  A Universal Cryptographic Sealing Primitive for Digital File
+  Provenance in the Age of Generative AI
+message: >-
+  If you refer to this work, please cite the paper. Note that the
+  system name "SEAL" is provisional and collides with Microsoft SEAL.
+type: generic
+authors:
+  - family-names: Shemesh
+    given-names: Ariel
+    orcid: null
+abstract: >-
+  A position and architecture paper on a trustless anchor for digital
+  file provenance. It makes three claims: interval timestamp semantics
+  whose anti-backdating bound terminates in Bitcoin via OpenTimestamps
+  and therefore holds even against the system's own sequencer; a
+  verifiable soft-binding resolution registry built in the
+  Certificate-Transparency pattern, whose positive matches carry
+  proofs and whose completeness is priced as a stated k-of-n indexer
+  quorum; and longevity engineering with confidential sealing, where
+  salted commitments leak nothing on-chain and epochal renewal carries
+  a seal across a hash-function break. It explicitly does not claim
+  the hard and soft binding of what, who and when, which belongs to
+  C2PA and JPEG Trust (ISO/IEC 21617-1:2025). The evaluation plan in
+  section 9 is committed, not executed. A complete reference package
+  accompanies the paper so every reported figure can be regenerated.
+version: "2.0"
+date-released: "2026-06-11"
+url: "https://github.com/ArielShemesh1999/seal-provenance"
+keywords:
+  - content provenance
+  - digital signatures
+  - document authenticity
+  - blockchain anchoring
+  - certificate transparency
+  - C2PA
+  - post-quantum cryptography
+  - generative AI

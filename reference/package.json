@@ -1,0 +1,22 @@
+{
+  "name": "reference",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@ethereumjs/common": "10.1.2",
+    "@ethereumjs/tx": "10.1.2",
+    "@ethereumjs/util": "10.1.2",
+    "@ethereumjs/vm": "10.1.2",
+    "@noble/post-quantum": "0.6.1",
+    "ethers": "6.16.0",
+    "solc": "0.8.35"
+  }
+}

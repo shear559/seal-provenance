@@ -1,0 +1,83 @@
+{
+  "schema": "SEAL/bench/v2",
+  "generatedAt": "2026-08-15T18:13:11.094Z",
+  "environment": {
+    "node": "v26.0.0",
+    "ethers": "6.16.0",
+    "noblePostQuantum": "0.6.1",
+    "platform": "darwin x64",
+    "cpu": "Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz",
+    "note": "single-threaded Node.js main thread; pure-JS crypto (ethers + @noble), no native addons, no workers"
+  },
+  "results": {
+    "commitmentConstruction": {
+      "iterations": 1000,
+      "inputBytes": 77,
+      "msPerOp": 0.5206,
+      "opsPerSec": 1921
+    },
+    "ecdsaSign": {
+      "iterations": 50,
+      "msPerOp": 0.9651,
+      "opsPerSec": 1036
+    },
+    "ecdsaRecover": {
+      "iterations": 50,
+      "msPerOp": 4.8575,
+      "opsPerSec": 206
+    },
+    "mlDsa65": {
+      "iterations": 20,
+      "keygenMsPerOp": 2.935,
+      "signMsPerOp": 10.124,
+      "verifyMsPerOp": 2.666,
+      "sizes": {
+        "publicKeyBytes": 1952,
+        "secretKeyBytes": 4032,
+        "signatureBytes": 3309,
+        "seedBytes": 32
+      }
+    },
+    "dictionaryAttack": {
+      "trials": 100000,
+      "totalSeconds": 1.51,
+      "trialCommitmentsPerSec": 66205,
+      "note": "keccak256 trial commitments an attacker can form against an UNSALTED hash; CONFIDENTIAL-mode salts make each trial infeasible without the salt"
+    },
+    "merkleBatching": {
+      "treeRule": "parent = keccak256(left || right), fixed left-right order, odd node promoted unchanged",
+      "rows": [
+        {
+          "N": 1,
+          "buildMs": 0.002,
+          "anchorBytesPerSeal": 32,
+          "proofLengthHashes": 0
+        },
+        {
+          "N": 10,
+          "buildMs": 0.276,
+          "anchorBytesPerSeal": 3.2,
+          "proofLengthHashes": 4
+        },
+        {
+          "N": 100,
+          "buildMs": 2.808,
+          "anchorBytesPerSeal": 0.32,
+          "proofLengthHashes": 7
+        },
+        {
+          "N": 1000,
+          "buildMs": 30.371,
+          "anchorBytesPerSeal": 0.032,
+          "proofLengthHashes": 10
+        },
+        {
+          "N": 10000,
+          "buildMs": 300.106,
+          "anchorBytesPerSeal": 0.0032,
+          "proofLengthHashes": 14
+        }
+      ]
+    }
+  }
+}

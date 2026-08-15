@@ -1,0 +1,18 @@
+{
+  "hardfork": "cancun",
+  "chainId": 11155111,
+  "solcVersion": "0.8.35+commit.47b9dedd.Emscripten.clang",
+  "optimizerRuns": 200,
+  "solcWarnings": 0,
+  "gas": {
+    "deploy": 895102,
+    "submitSeal": 63197,
+    "commit": 44361,
+    "reveal": 69316,
+    "revoke": 42017,
+    "checkpoint": 24712,
+    "renew": 24396,
+    "submitBatch": 23516
+  },
+  "assertions": "15/15"
+}
