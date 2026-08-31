@@ -2,9 +2,9 @@
 
 **A signature proves *who*. It does not prove *when* — and in the generative-AI era, *when* is the claim that decides whether a document is evidence or a fabrication.**
 
-This repository holds a 72-page position and architecture paper on sealing digital files so their provenance survives adversaries, transcoding, hash breaks and decades of time — together with the complete reference package, so every number in it can be reproduced on your own machine in about a minute.
+This repository holds a 63-page position and architecture paper on sealing digital files so their provenance survives adversaries, transcoding, hash breaks and decades of time — together with the complete reference package, so every number in it can be reproduced on your own machine in about a minute.
 
-**[Read the paper (PDF, 72 pp) →](paper/SEAL-whitepaper-v2.0.pdf)**
+**[Read the paper (PDF, 63 pp) →](paper/SEAL-whitepaper-v2.0.pdf)**
 
 ---
 
@@ -92,3 +92,5 @@ If you cite this work, GitHub's **Cite this repository** button renders the entr
 The paper and the reference package are published so the results can be independently checked. All rights are reserved; publication here is not a licence to redistribute or reuse. If you want to build on it, open an issue and ask — the answer is likely yes.
 
 Corrections are genuinely welcome. Three versions of this paper were wrong in ways that outside review caught, and that pattern is the only reason the current one is worth reading.
+
+Built by [@shear559](https://github.com/shear559).

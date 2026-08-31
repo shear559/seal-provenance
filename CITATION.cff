@@ -7,9 +7,7 @@ message: >-
   system name "SEAL" is provisional and collides with Microsoft SEAL.
 type: generic
 authors:
-  - family-names: Shemesh
-    given-names: Ariel
-    orcid: null
+  - name: shear559
 abstract: >-
   A position and architecture paper on a trustless anchor for digital
   file provenance. It makes three claims: interval timestamp semantics
@@ -27,7 +25,7 @@ abstract: >-
   accompanies the paper so every reported figure can be regenerated.
 version: "2.0"
 date-released: "2026-06-11"
-url: "https://github.com/ArielShemesh1999/seal-provenance"
+url: "https://github.com/shear559/seal-provenance"
 keywords:
   - content provenance
   - digital signatures
