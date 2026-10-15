@@ -2,7 +2,7 @@
 
 **A signature proves *who*. It does not prove *when* — and in the generative-AI era, *when* is the claim that decides whether a document is evidence or a fabrication.**
 
-This repository holds a 63-page position and architecture paper on sealing digital files so their provenance survives adversaries, transcoding, hash breaks and decades of time — together with the complete reference package, so every number in it can be reproduced on your own machine in about a minute.
+This repository holds a 63-page position and architecture paper on sealing digital files so their provenance survives adversaries, transcoding, hash breaks and decades of time — together with an executable reference package for the conformance and cost measurements in Appendices D–E.
 
 **[Read the paper (PDF, 63 pp) →](paper/SEAL-whitepaper-v2.0.pdf)**
 
@@ -33,7 +33,7 @@ The most load-bearing section of any provenance paper is the one that says what 
 - **Completeness of resolution is priced, not proven.** Positive matches carry proofs. *Absence* of a match rests on a k-of-n indexer quorum assumption, which is stated and bounded rather than hidden.
 - **The evaluation plan is committed, not executed.** §9 specifies a falsifiable adversarial evaluation on a public chain. It has not been run. The measurements in this repo are conformance and cost figures from the environments named beside them, and they are not a substitute for it.
 
-## Reproduce every number in the paper
+## Reproduce the Appendix D–E measurements
 
 The reference package is not pseudocode. It is the encoder the paper is normative about, a registry contract, a conformance suite and the benchmarks — all runnable:
 
@@ -83,7 +83,7 @@ This is a **position and architecture paper**, version 2.0, June 2026. It is not
 
 **The name is provisional.** "SEAL" collides with established projects — most notably Microsoft SEAL, the homomorphic-encryption library — and will be re-evaluated before any formal release. Nothing in the architecture depends on it.
 
-A phase-1a subset of this design — hard-binding commitment, EIP-712 attestation, browser-side signing and verification — ships in production inside [Click PDF](https://click-pdf.vercel.app), where a document can be edited and sealed in the same session.
+A phase-1a subset of this design — hard-binding commitment, EIP-712 attestation, browser-side signing and verification — was implemented in [Click PDF](https://github.com/shear559/click-pdf). Its PDF editing and SEAL capabilities are now part of [Sculio](https://editor-beta-ruby.vercel.app/#pdf); the former Click PDF origin is retained for browser-data recovery.
 
 ## Citing and rights
 
