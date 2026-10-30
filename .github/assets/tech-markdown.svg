@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="30" viewBox="0 0 120 30" role="img" aria-label="Markdown">
+<title>Markdown</title><metadata>Icon: https://github.com/dcurtis/markdown-mark/tree/360a3657fef7f6ad0b303296a95ad52985caa0d3. Source SVG: https://github.com/simple-icons/simple-icons/blob/develop/icons/markdown.svg; blob 53130fa5105f2d59c2ca5c0eec6ae1d0b8919c4f. CC0-1.0. Scaled and tinted for identification; no endorsement implied. See readme-assets-notice.txt.</metadata>
+<rect x=".5" y=".5" width="119" height="29" rx="7" fill="#161D28" stroke="#303C4F"/>
+<g transform="translate(9 6) scale(.75)" fill="#F5F7FA"><path d="M22.27 19.385H1.73A1.73 1.73 0 010 17.655V6.345a1.73 1.73 0 011.73-1.73h20.54A1.73 1.73 0 0124 6.345v11.308a1.73 1.73 0 01-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></g>
+<text x="35" y="20" fill="#E6EDF3" font-family="Arial, Helvetica, sans-serif" font-size="14">Markdown</text></svg>

@@ -1,4 +1,14 @@
+<p>
+  <img src=".github/assets/readme-banner.webp" alt="Document Provenance — Paper and Reference Implementation" width="100%" />
+</p>
+
 # Document Provenance — Paper and Reference Implementation
+
+<p>
+  <img src=".github/assets/tech-markdown.svg" alt="Markdown" height="30" />
+  <img src=".github/assets/tech-javascript.svg" alt="JavaScript" height="30" />
+  <img src=".github/assets/tech-nodedotjs.svg" alt="Node.js" height="30" />
+</p>
 
 A position and architecture paper on anchoring document-provenance claims, accompanied by executable reference code for its conformance and cost measurements.
 
